@@ -1,6 +1,6 @@
 # Rapid-Login
 
-The best login and profile page on the internet. Make sure to download json-server via `npm-install -g json-server'. 
+The best login and profile page on the internet. Make sure to download json-server via `npm-install -g json-server`. 
 
 You can then run the json-server with `json-server --watch db.json`. 
 
