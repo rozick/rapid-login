@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "miki",
+      "password": "123456",
+      "name": "Miki Lior",
+      "image": "http://stms.co.il/wp-content/uploads/2015/11/miki_lior.jpg"
+    },
+    {
+      "id": 2,
+      "username": "sarit",
+      "password": "123456",
+      "name": "Sarit Cohen",
+      "image": "https://lh3.googleusercontent.com/-q7LhvHBooRk/AAAAAAAAAAI/AAAAAAAAABQ/IIGYaDnnH0Q/s90-c-k-no/photo.jpg"
+    },
+    {
+      "id": 3,
+      "username": "nofar",
+      "password": "123456",
+      "name": "nofar bashiri",
+      "image": "https://i2-prod.mirror.co.uk/incoming/article9218897.ece/ALTERNATES/s615b/Mulan-still-3.jpg"
+    },
+    {
+      "id": 4,
+      "username": "rafi",
+      "password": "123456",
+      "name": "Rafi Ozick",
+      "image": "https://i.imgur.com/SvLHH78.jpg"
+    },
+    {
+      "id": 5,
+      "username": "bear",
+      "password": "123456",
+      "name": "really big bear",
+      "image": "http://mtagreen.org/resources/bear.jpg"
+    }
+  ]
+}
