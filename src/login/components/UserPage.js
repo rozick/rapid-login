@@ -15,22 +15,21 @@ const UserPage = ({
   handleTextCords
 }) => {
   return (
-    <div style={{ textAlign: 'center' }}>
+    <div className="center">
       <h1> Welcome to the best page in the universe!</h1>
       <h2>
         Click and drag your picture or name to move it around. Click again to
         release
       </h2>
-      <h3 style={{ display: 'inline' }}>
+      <h3 className="up-form">
         All done?
         <form
-          style={{ display: 'inline' }}
-          className="login-item"
+          className="up-form login-form"
           onSubmit={e => {
             handleLogout(e);
           }}
         >
-          <button type="submit" style={{ display: 'inline', marginBottom: 10 }}>
+          <button type="submit" className="up-form logout">
             Logout
           </button>
         </form>
@@ -50,8 +49,8 @@ const UserPage = ({
           onStop={handleImageCords}
         >
           <div>
-            <div className="handle" style={{ textDecoration: 'underline' }}>
-              <img src={image} alt="{name}" style={{ width: '50%' }} />
+            <div className="handle">
+              <img className="image" src={image} alt="{name}"/>
             </div>
           </div>
         </Draggable>
@@ -70,18 +69,16 @@ const UserPage = ({
         >
           <div>
             <div
-              className="handle"
-              style={{ display: 'inline', textDecoration: 'underline' }}
+              className="handle up-form"
             >
-              <h1 style={{ display: 'inline', marginLeft: 20 }}>{name}</h1>
+              <h1 className="up-form">{name}</h1>
             </div>
           </div>
         </Draggable>
       </div>
     </div>
   );
-};
-
+}
 UserPage.propTypes = {
   authenticated: PropTypes.bool.isRequired,
   name: PropTypes.string.isRequired,
