@@ -46,10 +46,10 @@ const LoginPage = ({ handleAuth, handleChange, username, password }) => {
 };
 
 LoginPage.propTypes = {
-  handleAuth: PropTypes.func,
-  handleChange: PropTypes.func,
-  username: PropTypes.string.isRequired,
-  password: PropTypes.string.isRequired
+  handleAuth: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired,
+  username: PropTypes.string,
+  password: PropTypes.string
 };
 
 export default LoginPage;
