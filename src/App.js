@@ -14,9 +14,6 @@ class App extends Component {
     this.state = {
       username: localStorage.getItem('state.username'),
       password: localStorage.getItem('state.password'),
-      authenticated: localStorage.getItem('state.authenticated')
-        ? localStorage.getItem('state.authenticated')
-        : false,
       users: null,
       id: localStorage.getItem('state.id'),
       name: localStorage.getItem('state.name'),
@@ -58,7 +55,6 @@ class App extends Component {
         localStorage.setItem('state.password', user.password);
         localStorage.setItem('state.image', user.image);
         this.setState({
-          authenticated: true,
           id: user.id,
           name: user.name,
           image: user.image
@@ -69,28 +65,22 @@ class App extends Component {
   };
 
   getImageCords = (e, ui) => {
-    console.log('event', e);
-    console.log('numbers', ui.x, ui.y);
     localStorage.setItem('state.imageX', ui.x);
     localStorage.setItem('state.imageY', ui.y);
     this.setState({
       imageX: ui.x,
       imageY: ui.y
     });
-    console.log(this.state.imageX, this.state.imageY);
     return false;
   };
 
   getTextCords = (e, ui) => {
-    console.log('event', e);
-    console.log('numbers:', ui.x, ui.y);
     localStorage.setItem('state.textX', ui.x);
     localStorage.setItem('state.textY', ui.y);
     this.setState({
       textX: ui.x,
       textY: ui.y
     });
-    console.log(this.state.textX, this.state.textY);
     return false;
   };
 
@@ -100,14 +90,16 @@ class App extends Component {
       authenticated: false
     });
     localStorage.clear();
+    window.location.reload(true);
   };
 
   render() {
+    const auth = (localStorage.getItem('state.authenticated') === 'true')
     return (
       <div>
         <LoginContainer
           users={this.state.users}
-          authenticated={this.state.authenticated}
+          authenticated={auth}
           name={this.state.name}
           image={this.state.image}
           handleChange={this.changeForm}
