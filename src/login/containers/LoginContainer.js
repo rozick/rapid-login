@@ -38,8 +38,8 @@ class LoginContainer extends Component {
 }
 LoginContainer.propTypes = {
   authenticated: PropTypes.bool.isRequired,
-  name: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  name: PropTypes.string,
+  image: PropTypes.string,
   username: PropTypes.string,
   password: PropTypes.string,
   handleImageCords: PropTypes.func,
